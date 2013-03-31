@@ -1,3 +1,5 @@
+#ifndef VECTO_H
+#define VECTO_H
 class Vector3 {
 private:
 	float x,y,z;
@@ -10,3 +12,4 @@ public:
 	float operator*(Vector3);		//перегруженное умножение
 	void Output();				    //вывод координат на экран
 };
+#endif

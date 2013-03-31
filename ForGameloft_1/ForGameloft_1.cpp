@@ -2,27 +2,22 @@
 //
 
 #include "stdafx.h"
-#include <iostream>
+#include "Vector4.h"
 #include "Vecto.h"
-using namespace std;
-
+#include "Matrix.h"
 
 
 int main() // проверка функций 
 {  
-	Vector3 var1(5.0,-3.0,-4.0);			 //создание двух объектов непустым конструктором
-	Vector3 var2(4.3,2.5,2.1);
-	Vector3 var3;							//создание объекта пустым конструктором
-	var1.Output();							//вывод исходных данных объектов на экран
-	var2.Output();
-	Vector3 result = var1 + var2;			//перегруженный +
-	result.Output();
-	float dot= var1*var2;					//перегруженное *
-	cout<<dot<<endl;
-	float len=var1.Length();				//длина вектора
-	cout<<len<<endl;
-	var1=var2;								//перегруженное =
-	var1.Output();
+
+Matrix a,b,c;
+Vector4 v(3,4,5,6),v1;
+a.print();
+a.setTranslation(2,4,6);
+bool boo=a.checkOrthogonality();
+cout<<boo;
+
+
 	system("pause");
 	return 0;
 }
